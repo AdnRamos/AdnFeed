@@ -1,0 +1,26 @@
+.wrapper{
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  
+  html{
+    /* para calcular o tamanho da font para responsividade
+    pegamos o valor padrão no nosso caso 16 que representa 100%
+    e tentamos fazer regra de três para vermos quantos por cento é 
+    o tamanho desejado no caso 14 então usamos:
+    14 * 100 / 16 = 87.5%
+    */
+    font-size: 87.5%;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
